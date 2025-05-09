@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.Stack;
+public class UserInputStack {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Stack<Integer> stack = new Stack<>();
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            int value = scanner.nextInt();
+            stack.push(value);
+        }
+        System.out.println("Stack after pushing: " + stack);
+        int v=scanner.nextInt();
+        if (!stack.isEmpty()) 
+        {
+            int popped = stack.pop(v);
+            System.out.println("Popped element: " + popped); 
+            System.out.println("Stack after popping: " + stack);
+        } else
+        {
+            System.out.println("Stack is empty. Nothing to pop.");
+        }
+    }
+}
